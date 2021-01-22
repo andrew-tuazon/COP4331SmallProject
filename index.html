@@ -1,22 +1,36 @@
-<html>
-    <head>
-        <title>Contact Manager. Team 21</title>
-        <script type="text/javascript" src="js/code.js"></script>
-        <script type="text/javascript" src="js/md5.js"></script>
-        <link href="css/styles.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    </head>  
-    <body>
-        <h1 id="title">Contact Manager</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-        <div id="loginDiv">
-            <span id="loginTitle">Please, log in:</span><br/>
-            <input type="text" id="loginName" placeholder="Username"/> <br/>
-            <input type="password" id="loginPassword" placeholder="Password"/><br/>
-            <button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Log in</button>
-            <button type="button" id="registerButton" class="button" onclick="doRegister();">Register</button>
-        </div>
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Faster One' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1 id="title"> Contact Manager </h1>
+    <h2 id="secondTitle"> Store your contacts here </h2>
+
+    <div class="container">
+        <h1 id="login-msg">Are you a returning user? Login below: </h1>
+       <a href="login.html">
+        <button id="login-here">  login here! </button>
+       </a>
+    </div>
+
+    <div class="container">
+        <h1 id="register-msg">Are you new here? Please register below: </h1>
+       <a href="register.html">
+        <button id="register-here">  register here! </button>
+       </a>
+    </div>
+   
+</body>
 </html>
