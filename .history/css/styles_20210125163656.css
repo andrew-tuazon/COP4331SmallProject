@@ -5,16 +5,9 @@ ul {
 }
 
 li {
-    float: right;
+    float: left;
 }
 a {
     display: block;
     padding: 8px;
-}
-body {
-    padding-top: 80px;
-}
-
-jumbotron {
-    background-color: aliceblue;
 }

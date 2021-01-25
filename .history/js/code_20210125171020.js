@@ -6,10 +6,10 @@ let firstName = ""
 let lastName = ""
 
 function doLogin() {
-    // let login = ;
+    let login = ;
     return;
 }
 
 function doRegister() {
-    return;
+    
 }

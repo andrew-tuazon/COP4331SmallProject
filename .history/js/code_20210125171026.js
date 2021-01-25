@@ -11,5 +11,5 @@ function doLogin() {
 }
 
 function doRegister() {
-    return;
+    
 }
