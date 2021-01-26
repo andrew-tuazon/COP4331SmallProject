@@ -1,4 +1,4 @@
 # exclude .history folder for organization purposes
-/.history
+/.history/*
 # the same for .vscode
-/.vscode
+/.vscode/*

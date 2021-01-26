@@ -14,3 +14,5 @@ const toggleColor = document.querySelectorAll(".colorbutton");
 toggleColor.forEach(btn => {
     btn.addEventListener("click", toggleColor);
 });
+
+document.documentElement.classList.remove('no-js')
