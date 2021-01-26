@@ -68,10 +68,11 @@ body, html {
     box-sizing: border-box;
 }
 
-.login button[type="submit"] {
+.login btn[type="submit"] {
     width: 100%;
     padding: 10px;
     border: 0;
+    font-weight: bold;
     cursor: pointer;
     box-sizing: border-box;
 }

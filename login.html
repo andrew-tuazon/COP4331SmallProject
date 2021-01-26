@@ -41,22 +41,24 @@
     </div>
     <div class="container">
         <p class="text-center fw-bold fs-5">Please Log In:</p>
-        <div class="row">
-            <form>
+        <div class="login">
+            <form action="auth" method="POST">
             <div class="form-group">
-                <label for="loginName">Username</label>
-                <input type="userName" class="form-control" id="loginName" placeholder="Username">
+                <input type="userName" class="form-control" id="loginName" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                    <label for="userPassword">Password</label>
-                    <input type="password" class="form-control" id="userPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="userPassword" placeholder="Password" required>
                 </div>
-                <button type="button" id="loginButton" class="btn btn-dark" onclick="doLogin();">LOGIN</button>
-                <span id="loginResult"></span>
+                <button type="submit" class="btn btn-dark">Login</button>
+                <label></label>
+                    <input type="checkbox" checked="checked" name="remember">Remember me?</label>
+                </label>
             </div>
             </form>
-            <p class="text-center fs-6">Are you a new user?</p>
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#SignUp">Sign Up Here!</button>
+            <div class="signupbutton text-center">
+                <p class="text-center fs-6">Are you a new user?</p>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#SignUp">Sign Up Here!</button>
+            </div>
             <!-- Modal Popup -->
             <div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog" role="dialog">

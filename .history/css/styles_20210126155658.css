@@ -63,15 +63,14 @@ body, html {
 .login input[type="username"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #d7dbee;
-    margin-bottom: 4%;
-    box-sizing: border-box;
+    border: 1px solid #dddddd;
 }
 
-.login button[type="submit"] {
+.login input[type="submit"] {
     width: 100%;
     padding: 10px;
     border: 0;
+    font-weight: bold;
     cursor: pointer;
     box-sizing: border-box;
 }
