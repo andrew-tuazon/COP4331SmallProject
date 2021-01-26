@@ -1,5 +1,6 @@
 :root[color-mode="light"] {
     background-color: #f8f8f2;
+    primary-color: ;
 }
 
 :root[color-mode="dark"] {
@@ -28,7 +29,6 @@ li {
 a {
     display: block;
     padding: 8px;
-    color: #6272a4;
     text-decoration: none;
     
 }
@@ -37,12 +37,8 @@ a:link {
     color: #6272a4;
 }
 
-a:active {
-    color: #bd93f9;
-}
+a:visited {
 
-a:hover {
-    color: white;
 }
 
 body, html {
