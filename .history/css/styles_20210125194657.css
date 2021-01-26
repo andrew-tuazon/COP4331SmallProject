@@ -1,10 +1,9 @@
 :root[color-mode="light"] {
-    background-color: #f8f8f2;
+    --surface1: ;
     --surface2: ;
 }
 
 :root[color-mode="dark"] {
-    background-color: #282a36;
 
 }
 
