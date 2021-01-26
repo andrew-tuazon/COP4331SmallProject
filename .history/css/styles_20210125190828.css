@@ -1,6 +1,5 @@
 :root[color-mode="light"] {
-    --surface1: ;
-    --surface2: ;
+
 }
 
 :root[color-mode="dark"] {
@@ -33,8 +32,8 @@ body, html {
     padding: 60px;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #282a36;
-    background-color: var(--surface1, #f8f8f2);
+    background-color: #
+    background-color: var(--surface1, #)
 }
 
 jumbotron {
@@ -43,7 +42,7 @@ jumbotron {
 
 .parallax {
     /* The image used */
-    background-image: url("./imgs/");
+    background-image: url("imgs/");
   
     /* Set a specific height */
     min-height: 100%; 

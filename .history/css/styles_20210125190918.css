@@ -1,6 +1,5 @@
 :root[color-mode="light"] {
-    --surface1: ;
-    --surface2: ;
+
 }
 
 :root[color-mode="dark"] {
@@ -33,8 +32,8 @@ body, html {
     padding: 60px;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #282a36;
-    background-color: var(--surface1, #f8f8f2);
+    background-color: ##282a36
+    background-color: var(--surface1, #f8f8f2)
 }
 
 jumbotron {
