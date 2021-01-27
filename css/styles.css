@@ -1,5 +1,6 @@
 :root[color-mode="light"] {
-    background-color: #f8f8f2;
+    background-color: #E7FCFF;
+    --dark: #4A4453;
 }
 
 :root[color-mode="dark"] {
@@ -42,7 +43,7 @@ a:active {
 }
 
 a:hover {
-    color: white;
+    color: #B18BEF;
 }
 
 body, html {
@@ -51,7 +52,7 @@ body, html {
     font-size: 1rem;
     line-height: 1.5;
     background-color: #282a36;
-    background-color: var(--surface1, #f8f8f2);
+    background-color: var(--surface1, #E7FCFF);
 }
 
 .login {
@@ -81,10 +82,20 @@ body, html {
     display: none !important;
   }
 
-jumbotron {
-    background-color: aliceblue;
+.jumbotron {
+    padding: 3rem;
+    
+    background-color: #cee3ed;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #dbd9d9;
+}
 .parallax {
     /* The image used */
     background-image: url("./imgs/");
