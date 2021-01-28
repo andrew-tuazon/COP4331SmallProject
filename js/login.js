@@ -13,13 +13,16 @@ var connection = mysql.createConnection({
 const urlBase = 'http://cop4331team21.live/LAMPAPI'
 const extension = '.php'
 
-let userID = 0
-let firstName = ""
-let lastName = ""
+let userID = 0;
+let firstName = "";
+let lastName = "";
 
 function doLogin() {
     // let login = ;
-    return;
+    var login = document.getElementById("loginName").nodeValue;
+    var password = document.getElementById("loginPassword").nodeValue;
+    var hash 
+    
 }
 
 function doRegister() {
@@ -32,7 +35,19 @@ function isLoggedIn () {
     localStorage.setItem('user', user)
 }
 
-function logout () {
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
+function doLogout()
+{
+	userId = 0;
+	firstName = "";
+	lastName = "";
+	document.cookie = "firstName= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+	window.location.href = "index.html";
+}
+
+function saveCookie()
+{
+	var minutes = 20;
+	var date = new Date();
+	date.setTime(date.getTime()+(minutes*60*1000));	
+	document.cookie = "firstName=" + firstName + ",lastName=" + lastName + ",userId=" + userId + ";expires=" + date.toGMTString();
 }
