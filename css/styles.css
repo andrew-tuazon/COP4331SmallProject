@@ -1,6 +1,7 @@
 :root[color-mode="light"] {
     background-color: #E7FCFF;
     --dark: #4A4453;
+    
 }
 
 :root[color-mode="dark"] {
@@ -53,6 +54,7 @@ body, html {
     line-height: 1.5;
     background-color: #282a36;
     background-color: var(--surface1, #E7FCFF);
+    margin-bottom: 60px;
 }
 
 .login {
@@ -88,14 +90,11 @@ body, html {
     background-color: #cee3ed;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #dbd9d9;
+.footer container {
+    width: auto;
+    padding: 60px 15px 0;
 }
+
 .parallax {
     /* The image used */
     background-image: url("./imgs/");
