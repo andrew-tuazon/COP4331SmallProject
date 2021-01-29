@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 
-    <title>Contact Manager Register</title>
+    <title>Contact Manager - Register</title>
 </head>
 <body>
     <header>
@@ -22,7 +22,10 @@
     </header>
 
     <form action="auth" method="POST">
-        <div class="form-group">
+        <p class="text-center fw-bold fs-5">Please Register:</p>
+        <div class="register">
+            <form action="auth" method="POST">
+            <div class="form-group">
             <input type="userName" class="form-control" id="loginName" placeholder="Username" required>
             </div>
             <div class="form-group">
@@ -34,8 +37,6 @@
             <div class="form-group">
                 <input type="text" class="form-control" id="lastName" placeholder="last Name" required>
             </div>
-            <!-- <button type="submit" class="btn btn-dark">Register Now!</button>
-            <label></label> -->
             <button type="submit" class="btn btn-secondary" id="create-account" onclick="doRegister();">Create account</button>
             </label>
         </div>
