@@ -26,19 +26,20 @@
         <div class="register">
             <form action="auth" method="POST">
             <div class="form-group">
-            <input type="userName" class="form-control" id="loginName" placeholder="Username" required>
+            <input type="userName" class="form-control" id="registerName" placeholder="Username" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="userPassword" placeholder="Password" required>
+                <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="firstName" placeholder="first Name" required>
+                <input type="text" class="form-control" id="registerFirst" placeholder="first Name" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="lastName" placeholder="last Name" required>
+                <input type="text" class="form-control" id="registerLast" placeholder="last Name" required>
             </div>
             <button type="submit" class="btn btn-secondary" id="create-account" onclick="doRegister();">Create account</button>
             </label>
+            <span id="registerResult"></span>
         </div>
         </form>
     

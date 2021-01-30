@@ -32,18 +32,19 @@
         <div class="login">
             <form action="auth" method="POST">
             <div class="form-group">
-                <input type="userName" class="form-control" id="loginName" placeholder="Username" required>
+                <input type="userName" class="form-control" id="login" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="userPassword" placeholder="Password" required>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
                 </div>
-                <button type="submit" class="btn btn-dark">Login</button>
-                <label></label>
+                <button type="submit" class="btn btn-dark" onclick="doLogin();">Login</button>
+                <!-- <label></label> -->
                     <input type="checkbox" checked="checked" name="remember">Remember me?</label>
+                    <span id="loginResult"></span>
                 </label>
             </div>
             </form>
-            
+
             <div class="signupbutton text-center">
                 <p class="text-center fs-6">Are you a new user?</p>
                 <a href="register.html">

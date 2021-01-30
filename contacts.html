@@ -38,18 +38,41 @@
 </nav>
 
 <!--seperates right side and left side-->
-<div class="container">
+<div class="container-fluid">
  <div class="row g-0">
+
+    <!--left side of page: shows contact list/search contacts-->
     <div class="col-md-6 g-0">
         <p class="text-center display-6">Search your contacts here!</p>
         <div class="leftside">
+
+            <!-- prints Greeting for user-->
+            <script>
+                $("#login").text("Hello, " + login.val());
+            </script>
+
+            <!--search bar-->
             <div class="input-group">
                 <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                   aria-describedby="search-addon" />
                 <button type="button" class="btn btn-outline-primary">search</button>
             </div>
+
+            <!--show contact list (firstname lastname)-->
+            <div id = "contactList">
+              <script>
+                  $.get("create.php", function(data){
+                      $('#firstName').html(data.firstName);
+                      $('#lastName').html(data.lastName);
+                      
+                      console.log($("#firstName").val() + $("#lastName").val());
+                    });
+              </script>
+            </div>
         </div>
     </div>
+
+    <!--right side of page: shows all fields of contact. Edit and Delete a contact-->
     <div class="col-md-6 g-0">
         <p class="text-center display-6">Edit and Delete contacts here!</p>
        <div class="rightside"></div>
