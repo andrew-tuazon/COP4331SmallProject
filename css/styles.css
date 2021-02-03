@@ -83,6 +83,7 @@ body, html {
     margin: 0 auto;
 }
 
+.register input[type="text"],
 .register input[type="password"],
 .register input[type="username"] {
     width: 100%;
@@ -134,21 +135,13 @@ body, html {
   .leftside{
       height:100vh;
       width:100%;
+      background: #cee3ed;
   }
   
   .rightside{
       height:100vh;
       width:100%;
+      background:#d7dbee;
 
   }
   
-  .leftside
-  {
-      background: #cee3ed;
-
-  }
-
-  .rightside
-  {
-      background:#d7dbee;
-  }

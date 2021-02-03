@@ -7,6 +7,7 @@
     <!-- Bootstrap Requirements -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
@@ -48,24 +49,46 @@
 
             <!-- prints Greeting for user-->
             <script>
+                $(document).ready(function(){
                 $("#login").text("Hello, " + login.val());
+            });
             </script>
 
             <!--search bar-->
             <div class="input-group">
                 <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                   aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-primary">search</button>
+                <button type="button" class="btn btn-outline-primary" onclick="searchContact();">search</button>
+                <span id="contactSearchResut"></span>
+
+                <!--autocomplete-->
+                <script>
+                    $(function(){
+                        $("#firstName").autocomplete({
+                            source: ["Andrew", "Alex", "Dima", "Dorri", "Henry"],
+                            minLength: 1
+                        });
+                    });
+                </script>
             </div>
 
             <!--show contact list (firstname lastname)-->
             <div id = "contactList">
               <script>
-                  $.get("create.php", function(data){
-                      $('#firstName').html(data.firstName);
-                      $('#lastName').html(data.lastName);
-                      
-                      console.log($("#firstName").val() + $("#lastName").val());
+                  $(document).ready(function(){
+                      // loops through all of the contacts in  the user's list
+                      var obj = jQuery.parseJSON(response);
+                      $.each(obj, function(index){
+                      console.log(index + ". ");
+                      index += 1;
+                        $.get("LAMPAPI/create.php", function(first, last){
+                        // gets and displays the firstname and lastname of the contact
+                        first = $("#firstName").val();
+                        last = $("#lastName").val();
+
+                        console.log(first + " " + last);
+                        });
+                      });
                     });
               </script>
             </div>
