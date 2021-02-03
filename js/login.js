@@ -99,8 +99,7 @@ function doRegister() {
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-                window.location.href = "contacts.html";
-                
+                window.location.href = "contacts.html"; 
 			}
 		};
 		
