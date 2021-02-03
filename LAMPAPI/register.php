@@ -1,11 +1,16 @@
 <?php
+	include 'util.php';
+	include 'classes/user.php';
 
 	$inData = getRequestInfo();
 	
-	$firstName = $inData["registerFirst"];
-	$lastName = $inData["registerLast"];
-	$login = $inData["registerName"];
-	$password = $inData["registerPassword"];
+	try {
+		$user = new User(0, $inData["registerFirst"], $inData["registerLast"], 
+						$inData["registerName"], $inData["registerPassword"]);
+	} catch (Exception $e) {
+		echo 'Caught Exception: ', $e->getMessage(), "\n";
+		returnWithError($e->getMessage());
+	}
 	
 	$conn = new mysqli("localhost", "Team21", "COP433121Team", "COP4331");
 
@@ -15,29 +20,14 @@
 	} 
 	else
 	{
-		$sql = "insert into USERS (firstName, lastName, login, password) VALUES ('" . $firstName . "','". $lastName . "','" . $login . "', '" . $password . "')";
+		$sql = "insert into USERS (firstName, lastName, login, password) VALUES (`" . $user.get_firstName() . 
+		"`, `". $user.get_lastName() . "`, `" . $user.get_login() . "`, `" . $user.get_password() . "`)";
+
 		if($result = $conn->query($sql) != TRUE)
 		{
 			returnWithError($conn->error);
 		}
+		
 		$conn->close();
 	}
-	
-	function getRequestInfo()
-	{
-		return json_decode(file_get_contents('php://input'), true);
-	}
-
-	function sendResultInfoAsJson( $obj )
-	{
-		header('Content-type: application/json');
-		echo $obj;
-	}
-	
-	function returnWithError( $err )
-	{
-		$retValue = '{"error":"' . $err . '"}';
-		sendResultInfoAsJson( $retValue );
-	}
-	
 ?>
