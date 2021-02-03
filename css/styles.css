@@ -1,7 +1,6 @@
 :root[color-mode="light"] {
     background-color: #E7FCFF;
     --dark: #4A4453;
-    
 }
 
 :root[color-mode="dark"] {
@@ -54,7 +53,6 @@ body, html {
     line-height: 1.5;
     background-color: #282a36;
     background-color: var(--surface1, #E7FCFF);
-    margin-bottom: 60px;
 }
 
 .login {
@@ -79,6 +77,22 @@ body, html {
     box-sizing: border-box;
 }
 
+.register
+{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="username"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d7dbee;
+    margin-bottom: 4%;
+    box-sizing: border-box;
+}
+
 /* Disallow access if there's no JavaScript */
 .no-js main {
     display: none !important;
@@ -90,11 +104,14 @@ body, html {
     background-color: #cee3ed;
 }
 
-.footer container {
-    width: auto;
-    padding: 60px 15px 0;
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
 }
-
 .parallax {
     /* The image used */
     background-image: url("./imgs/");
@@ -114,4 +131,18 @@ body, html {
       background-attachment: scroll;
     }
   }
+   
+  .leftside{
+      height:100vh;
+      width:100%;
+      background: #cee3ed;
+  }
+  
+  .rightside{
+      height:100vh;
+      width:100%;
+      background:#d7dbee;
+
+  }
+
   

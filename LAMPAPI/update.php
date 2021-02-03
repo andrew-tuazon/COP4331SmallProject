@@ -33,4 +33,8 @@
 
 		$conn->close();
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1bf10a5de8de3f3673ea29adb0afbd5e7770820
 ?>
