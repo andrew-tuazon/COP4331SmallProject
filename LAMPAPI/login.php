@@ -46,4 +46,5 @@
         sendResultInfoAsJSON($returnValue);
     }
 
+
 ?>
