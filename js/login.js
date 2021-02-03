@@ -1,9 +1,9 @@
-var mysql = require('mysql');
+let mysql = require('mysql');
 var path = require('path');
 var express = require('express');
 const { rootCertificates } = require('tls');
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host : 'cop4331team21.live',
     user : rootCertificates,
     password : '',
@@ -19,9 +19,9 @@ let lastName = "";
 
 function doLogin() {
     // let login = ;
-    var login = document.getElementById("loginName").nodeValue;
-    var password = document.getElementById("loginPassword").nodeValue;
-    var hash 
+    let login = document.getElementById("loginName").nodeValue;
+    let password = document.getElementById("loginPassword").nodeValue;
+    let hash 
     
 }
 

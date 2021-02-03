@@ -1,9 +1,9 @@
 const urlBase = 'http://cop4331team21.live/LAMPAPI'
-var extension = 'php';
+const extension = '.php';
 
-var userId = 0;
-var firstName = "";
-var lastName = "";
+let userId = 0;
+let firstName = "";
+let lastName = "";
 
 // login
 function doLogin()
@@ -18,11 +18,11 @@ function doLogin()
 	
 	document.getElementById("loginResult").innerHTML = "";
 
-	var jsonPayload = '{"login" : "' + login + '", "password" : "' + hash + '"}';
+	const jsonPayload = '{"login" : "' + login + '", "password" : "' + hash + '"}';
 	// var jsonPayload = '{"login" : "' + login + '", "password" : "' + password + '"}';
-	var url = urlBase + '/Login.' + extension;
+	const url = urlBase + '/Login' + extension;
 
-	var xhr = new XMLHttpRequest();
+	const xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	try
@@ -66,21 +66,21 @@ function doRegister()
 	firstName = "";
 	lastName = "";
 	
-	var login = document.getElementById("registerName").value;
-    var password = document.getElementById("registerPassword").value;
-    var first = document.getElementById("registerFirst").value;
-    var last = document.getElementById("registerLast").value;
-	var hash = md5( password );
+	const login = document.getElementById("registerName").value;
+    const password = document.getElementById("registerPassword").value;
+    const first = document.getElementById("registerFirst").value;
+    const last = document.getElementById("registerLast").value;
+	const hash = md5( password );
 	
 	document.getElementById("loginResult").innerHTML = "";
 
-	var jsonPayload = '{"login" : "' + login + '", "password" : "' + hash + '", "first" : "' + first + '", "last" : "' + last + '"}';
+	const jsonPayload = '{"login" : "' + login + '", "password" : "' + hash + '", "first" : "' + first + '", "last" : "' + last + '"}';
 
 	// var dat = {login:login, password:hash, first:firstName, last:lastName};
 	// var jsonPay = JSON.stringify(dat);
 
 	// var jsonPayload = '{"login" : "' + login + '", "password" : "' + password + '"}';
-	var url = urlBase + '/register.' + extension;
+	var url = urlBase + '/register' + extension;
 
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -174,7 +174,7 @@ function addContact()
 					   + '", "phone" : "' + phone + '", "email" : "' + email + '", "address" : "' + address
 					   + '", "city": "' + city + '", "state" : "' + state + '", "zip" : "' + zipCode + '"}';
 
-	var url = urlBase + '/AddContact.' + extension;
+	var url = urlBase + '/AddContact' + extension;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -206,7 +206,7 @@ function searchContact()
 	var contactList = "";
 	
 	var jsonPayload = '{"search" : "' + srch + '","uid" : ' + userId + '}';
-	var url = urlBase + '/SearchContacts.' + extension;
+	var url = urlBase + '/SearchContacts' + extension;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
