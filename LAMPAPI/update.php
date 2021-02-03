@@ -1,33 +1,33 @@
 <?php
 
 	$inData = getRequestInfo();
-	
-	$id = 0;
-	$firstName = "";
-	$lastName = "";
+
+	$cid = $inData["contactId"]
+	$firstName = $inData["contactFirstName"];
+	$lastName = $inData["contactLastName"];
+	$phone = $inData["phone"];
+	$email = $inData["email"];
+	$address = $inData["address"];
+	$city = $inData["city"];
+	$state = $inData["state"];
+	$zip = $inData["zip"];
 
 	$conn = new mysqli("localhost", "Team21", "COP433121Team", "COP4331");
+
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$sql = "SELECT ID,firstName,lastName FROM Users where Login='" . $inData["login"] . "' and Password='" . $inData["password"] . "'";
-		$result = $conn->query($sql);
-		if ($result->num_rows > 0)
-		{
-			$row = $result->fetch_assoc();
-			$firstName = $row["firstName"];
-			$lastName = $row["lastName"];
-			$id = $row["ID"];
-			
-			returnWithInfo($firstName, $lastName, $id );
+		$sql = "UPDATE CONTACTS SET firstName = '".$firstName."', lastName = '".$lastName."', phone = '".$phone."', email = '".$email."', address = '".$address."', city = '".$city."', state = '".$state."', zip = '".$zip."' WHERE cid = $cid
+		if ($conn->query($sql) === TRUE) {
+  			echo "Contact information updated successfully";
+		} 
+		else {
+ 			echo "Error updating contact information: " . $conn->error;
 		}
-		else
-		{
-			returnWithError( "No Records Found" );
-		}
+		
 		$conn->close();
 	}
 	
@@ -44,13 +44,7 @@
 	
 	function returnWithError( $err )
 	{
-		$retValue = '{"id":0,"firstName":"","lastName":"","error":"' . $err . '"}';
-		sendResultInfoAsJson( $retValue );
-	}
-	
-	function returnWithInfo( $firstName, $lastName, $id )
-	{
-		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '","error":""}';
+		$retValue = '"error":"' . $err . '"';
 		sendResultInfoAsJson( $retValue );
 	}
 	

@@ -2,6 +2,7 @@
 
 	$inData = getRequestInfo();
 	
+	
 	$firstName = $inData["contactFirstName"];
 	$lastName = $inData["contactLastName"];
 	$phone = $inData["phone"];
@@ -24,6 +25,7 @@
 		{
 			returnWithError($conn->error);
 		}
+
 		$conn->close();
 	}
 	
