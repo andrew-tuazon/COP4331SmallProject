@@ -1,5 +1,4 @@
 <?php
-
 	$inData = getRequestInfo();
 	
 	$firstName = $inData["registerFirst"];
