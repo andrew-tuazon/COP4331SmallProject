@@ -20,7 +20,7 @@
 	} 
 	else
 	{
-		$sql = "UPDATE CONTACTS SET firstName = '".$firstName."', lastName = '".$lastName."', phone = '".$phone."', email = '".$email."', address = '".$address."', city = '".$city."', state = '".$state."', zip = '".$zip."' WHERE cid = $cid
+		$sql = "UPDATE CONTACTS SET firstName = '".$firstName."', lastName = '".$lastName."', phone = '".$phone."', email = '".$email."', address = '".$address."', city = '".$city."', state = '".$state."', zip = '".$zip."' WHERE cid = $cid AND uid = $uid
 		if ($conn->query($sql) === TRUE) {
   			echo "Contact information updated successfully";
 		} 
