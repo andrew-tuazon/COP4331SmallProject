@@ -6,40 +6,52 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Faster One' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 
-    <title>Contact Manager Register</title>
+    <title>Contact Manager - Register</title>
 </head>
 <body>
-    <h1 id="title"> Contact Manager </h1>
-    <h2 id="secondTitle"> Store your contacts here </h2> 
-
-    <form id="register-form">
-        <div class="form-group">
-            <span id="register-prompt">Please register a New Account</span>
-            <label for="username">Username: </label>
-            <input type="text" class="form-control" placeholder="Enter a unique username" id="username">
-        </div>
-        <div class="form-group">
-            <label for="pwd"> Password: </label>
-            <input type="password" class="form-control" placeholder="Enter a password" id="pwd">
-        </div>
-
-        <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember Me
+    <header>
+        <div id="nav-placement"></div>
+        <script>
+            $(function(){
+                $('#nav-placement').load("nav.html nav");
+            });
+        </script>
+    </header>
+    
+    <!--registration page-->
+    <form action="auth" method="POST">
+        <p class="text-center fw-bold fs-5">Please Register:</p>
+        <div class="register">
+            <form action="auth" method="POST">
+            <div class="form-group">
+                <label for="registerName">Username: </label>
+                <input type="userName" class="form-control" id="registerName" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password: </label>
+                <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="registerFirst">First Name: </label>
+                <input type="text" class="form-control" id="registerFirst" placeholder="first Name" required>
+            </div>
+            <div class="form-group">
+                <label for="registerLast">Last Name: </label>
+                <input type="text" class="form-control" id="registerLast" placeholder="last Name" required>
+            </div>
+            <button type="submit" class="btn btn-secondary" id="create-account" onclick="doRegister();">Create account</button>
             </label>
+            <span id="registerResult"></span>
         </div>
-
-        <button type="submit" class="btn btn-secondary" id="create-account" onclick="doRegister();">Create account</button>
-
-    </form>
-
+        </form>
+    
+<!-- 
     <a href="index.html">
         <button type="button" class="btn btn-success"> return to home page </button>
-    </a>
+    </a> -->
     
 </body>
 </html>
